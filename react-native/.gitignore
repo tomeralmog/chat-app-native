@@ -2,3 +2,11 @@
 dist
 node_modules
 typings
+src/*.js
+src/**/*.js
+src/*.map
+src/**/*.map
+test/*.js
+test/**/*.js
+test/*.map
+test/**/*.map

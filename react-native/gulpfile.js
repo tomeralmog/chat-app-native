@@ -8,7 +8,7 @@ var path = require('path');
 var runSequence = require('run-sequence');
 var through2 = require('through2');
 
-var APP_NAME = 'ngRnSeed';
+var APP_NAME = 'familyme';
 var PATHS = {
   sources: {
     src: 'src/**/*.ts',
@@ -47,8 +47,12 @@ gulp.task('!assets', function () {
   return gulp.src(PATHS.sources.assets, {base: './src'}).pipe(gulp.dest(PATHS.app));
 });
 gulp.task('transpile', ['!assets'], function () {
+  gulp.src('./../app/services/**/*.ts')
+        .pipe(gulp.dest(PATHS.app+'/services/'));
   return ts2js([PATHS.sources.src], PATHS.app);
 });
+
+
 
 gulp.task('!launch.android', ['transpile'], function(done) {
   executeInAppDir('react-native run-android', done);

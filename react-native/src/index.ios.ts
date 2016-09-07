@@ -1,4 +1,8 @@
-import {bootstrapReactNative} from 'angular2-react-native';
-import {HelloModule} from './module';
+import {bootstrapReactNative, ROUTER_PROVIDERS, HTTP_PROVIDERS} from 'angular2-react-native';
+import {LoginComponentNative} from './user/login.component.native';
 
-bootstrapReactNative('ngRnSeed', HelloModule);
+bootstrapReactNative(
+  'familyme',
+  LoginComponentNative,
+  [ROUTER_PROVIDERS, HTTP_PROVIDERS]
+);

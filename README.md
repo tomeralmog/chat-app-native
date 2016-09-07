@@ -26,6 +26,8 @@ After that, go to the starter directory and just run:
 npm install
 ```
 
+then to install
+
 ## Start
 Let's start up the server, run:
 `gulp` or `gulp serve-dev`
