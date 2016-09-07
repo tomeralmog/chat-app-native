@@ -85,7 +85,7 @@ function compileTs(files, watchMode) {
             if (watchMode) {
                 return;
             }
-            process.exit(1);
+            //process.exit(1);
         });
     return res.js
         .pipe(sourcemaps.write('.', {
