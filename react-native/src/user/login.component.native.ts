@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {OpacityFeedback} from 'angular2-react-native';
 import {StyleSheet} from 'react-native';
 
-import {State} from '../services/state';
+//import {UserService} from '../services/user.service';
 
 
 @Component({
@@ -13,16 +13,15 @@ import {State} from '../services/state';
 <View [styleSheet]="styles.container">
   <Text [styleSheet]="styles.welcome">
     Welcome to family.me native app1
-    {{state}}
   </Text>
 </View>
-<Image [styleSheet]="styles.image"   [source]="familymeLogo"></Image>
+<Image [styleSheet]="styles.image" [source]="familymeLogo"></Image>
 `
 })
 export class LoginComponentNative {
-  familymeLogo: any = require('./../assets/images/logo.png');
+
+  familymeLogo: string = require('./../assets/images/logo.png');
   styles: any;
-  state = State.STATES[0].searchable;
   constructor() {
     this.styles = StyleSheet.create({
       container: {

@@ -47,7 +47,7 @@ gulp.task('!assets', function () {
   return gulp.src(PATHS.sources.assets, {base: './src'}).pipe(gulp.dest(PATHS.app));
 });
 gulp.task('transpile', ['!assets'], function () {
-  gulp.src('./../app/services/**/*.ts')
+  gulp.src('./../src/app/services/**/*.ts')
         .pipe(gulp.dest(PATHS.app+'/services/'));
   return ts2js([PATHS.sources.src], PATHS.app);
 });
